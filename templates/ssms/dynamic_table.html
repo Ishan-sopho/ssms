@@ -19,6 +19,9 @@
 	    	<th>Meal type</th>
 		<th>Bhawan</th>
 		<th>Room No.</th>
+		{% ifequal grub.batch_allocated "Yes" %}
+		<th>Batch</th>
+		{% endifequal %}
 		<th>Status</th>
 	</tr>
 </thead>
@@ -31,6 +34,9 @@
 	<td>{{i.meal}}</td>
 	<td>{{i.bhawan}}</td>
 	<td>{{i.room}}</td>
+	{% ifequal grub.batch_allocated "Yes" %}
+	<td>{{i.batch.batch_name}}</td>
+	{% endifequal %}
 	<td>{{i.status}}</td>
 	</tr>
 	 {% endfor %}  
@@ -38,8 +44,11 @@
 </table>
 <br>
 <h2>Registered:{{reg}}</h2>
-
 <h2>Opted Out:{{out}}</h2>
+{% if vegreg %}
+<h2>Veg Reg : {{ vegreg }}</h2>
+<h2>Non Veg Reg : {{ nonvegreg }}</h2>
+{% endif %}
 {% else %}
 <h2>You are not allowed to view this page</h2>
 <h2>Login to View this page</h2>

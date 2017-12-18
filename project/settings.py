@@ -22,7 +22,7 @@ STATIC_PATH = os.path.join(BASE_DIR,'static')
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
+SECRET_KEY = 'y%(fr2hk01$g5fdi@!iuwu@nid)un_hy$-deyh%403poa6+l2c'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'project.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
-
+#Change it accordingly to aws/heroku fields
 DATABASES = {
     'default': {
 	'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -223,7 +223,7 @@ FILE_UPLOAD_HANDLERS = ("django_excel.ExcelMemoryFileUploadHandler",
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-
+#Enter credentials for seding emails
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_PASSWORD = ''
 EMAIL_HOST_USER = ''
@@ -234,7 +234,7 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 
 # aws
-
+#For AWS storage of media
 AWS_STORAGE_BUCKET_NAME = ''
 AWS_ACCESS_KEY_ID = ''
 AWS_SECRET_ACCESS_KEY = ''

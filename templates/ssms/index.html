@@ -81,6 +81,7 @@ Bhawan:
 		<!-- For SSMS-->
 		{% elif user.is_superuser %}
 		<a href="/ssms/import/"><button type="submit" class="btn btn-lg btn-primary " name="students" value="Add students">Upload Student List</button></a> 
+		<h3><a href="/ssms/ssms/menu_upload/"><button type="submit" class="btn btn-lg btn-info " name="students" value="Add students">Upload Menu</button></a> </h3>
 	
 		{% else %}
 		<!-- For students-->
@@ -90,7 +91,8 @@ Bhawan:
 		<h3>Room No. : {{ student.room_no }}</h3>
 		<hr>
 <br/>
-		<h5> For any corrections in the above details, contact SSMS Tech Team.</h5>
+		<h5> *For any corrections in the above details, contact SSMS Tech Team.</h5>
+		<h4><strong> **You can now give feedback for any past grubs, you had signed up for, on their grub page.</strong></h4>
 		{% endif %}
 	{% else %}
 	<hr>
